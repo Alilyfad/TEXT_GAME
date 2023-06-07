@@ -28,8 +28,8 @@ public class TEXT_GAME_MNGR : MonoBehaviour
 
     public void GoUpStairs()
     {
-        hpValue -= 10;
-        staminaValue -= 10;
+        hpValue = 0;
+        staminaValue = 0;
         startOfStory = "YOU DIED. It's dark and you slipped on the floor.";
         Lvl1_Choices.SetActive(false);
     }
@@ -46,5 +46,15 @@ public class TEXT_GAME_MNGR : MonoBehaviour
         staminaValue -= 3;
         hpValue += 15;
         startOfStory = "You cooked egg and bacon.";
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void StartAdventure()
+    {
+
     }
 }
